@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Car-pridiction</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{{url_for('static',filename ='ThirdPage/fonts/material-icon/css/material-design-iconic-font.min.css')}}">
+	<link rel="stylesheet" href="{{url_for('static',filename ='ThirdPage/landingcss/style.css')}}">
+     <!-- JS -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="{{url_for('static',filename ='ThirdPage/landingjs/flaskcon.js')}}"></script>
+
+
+</head>
+<body>
+
+    <div class="main">
+        <header id="header" class="alt">
+            <a href="Thirdpage" class="logo" ><strong>Home</strong> <span></span></a>
+        </header>
+
+    
+        
+        <div class="header">
+        </div>
+        <div class="container">
+            <form id="booking-form" class="booking-form">
+                <div class="form-group">
+                    <div class="form-destination">
+                        <label for="Cars registed year">Birth Year of Car</label>
+                        <input type="text" id="a" name="name" placeholder="EG. 2000" />
+                    </div>
+                    <div class="form-destination">
+                        <label for="Kilometer">Kilometers_Driven</label>
+                        <input type="text" id="b" name="kilo" placeholder="EG. 12000" />
+                    </div>
+                    <div class="form-date-from form-icon">
+                        <label for="Milleage">Milleage</label>
+                        <input type="text" id="c" class="date_from" name="mille" placeholder="EG. 19.67 kmpl" />
+                        <!-- <span class="icon"><i class="zmdi zmdi-calendar-alt"></i></span> -->
+                    </div>
+                    <div class="form-date-to form-icon">
+                        <label for="Engine">Engine</label>
+                        <input type="text" id="d" class="date_to" name="engine" placeholder="EG. 1582 CC" />
+                        <!-- <span class="icon"><i class="zmdi zmdi-calendar-alt"></i></span> -->
+                    </div>
+                    <div class="form-date-to form-icon">
+                        <label for="Power">Power</label>
+                        <input type="text" id="e" class="date_to" name="power" placeholder="EG. 126.2 bhp" />
+                        <!-- <span class="icon"><i class="zmdi zmdi-calendar-alt"></i></span> -->
+                    </div>
+                    <div class="form-quantity">
+                        <label for="Seats">Seats</label>
+                        
+                        <input type="number" name="seats" id="f" value="0" min="0" class="nput-text qty text">
+                        
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <div class="form-destination">
+                        <label for="destination">Choose a CarBrand</label>
+                        <select name="Cars" id="carsName" name="name">
+                            <option value="" disabled="disabled" selected="selected">BrandNames</option>
+                        </select>
+                    </div>
+                    <div class="form-destination">
+                        <label for="destination">Choose a Car Location</label>
+                        <select name="Cars" id="carsLoc" name="location">
+                            <option value="" disabled="disabled" selected="selected">BandLocation</option>
+                        </select>
+                    </div>
+                    <div class="form-destination">
+                        <label for="destination">Car_Fuel_Type</label>
+                        <select name="Cars" id="carsFuel" name="fuel">
+                            <option value="" disabled="disabled" selected="selected">Band_Fuel_type</option>
+                        </select>
+                    </div>
+                    <div class="form-destination">
+                        <label for="destination">Car_Transmission</label>
+                        <select name="Cars" id="carsTrans" name="Trans">
+                            <option value="" disabled="disabled" selected="selected">Brand_Transmission</option>
+                        </select>
+                    </div>
+                    <div class="form-destination">
+                        <label for="destination">Car_Owner_type</label>
+                        <select name="Cars" id="carsOwner" name="owner">
+                            <option value="" disabled="disabled" selected="selected">Brand_owner_Type</option>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="a">
+                    <div class="form-submit">
+                        <input type="button" id="submit" class="submit" value="Predict" onclick="onClickedEstimatePrice()" />
+                    </div>
+                </div>
+            </form>
+            <div id="EstimatedPrice" class="result"  style=" text-align: center; color: chartreuse;" >	<h2></h2> </div>
+        </div>
+
+    </div>
+
+   
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
