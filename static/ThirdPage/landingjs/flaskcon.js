@@ -14,7 +14,7 @@ function onClickedEstimatePrice() {
     var owner=document.getElementById("carsOwner");
     var estPrice = document.getElementById("EstimatedPrice");
 
-    var url = "predict_price";
+    var url = "http://127.0.0.1:5000/predict_price";
 
     $.post(url, {
 
