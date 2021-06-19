@@ -43,6 +43,7 @@ function onClickedEstimatePrice() {
     $.get(url,function(data, status) {
         console.log("got response for get_location_names request");
         if(data) {
+			console.log("Got Data");
             var locations = data.locations;
             var carsLoc = document.getElementById("carsLoc");
             $('#carsLoc').empty();
