@@ -66,7 +66,7 @@ function onClickedEstimatePrice() {
             }
         }
     });
-    var url = "http://127.0.0.1:5000/get_car_Transmission"; 
+    var url = "get_car_Transmission"; 
     
     $.get(url,function(data, status) {
         console.log("got response for get_location_names request");
@@ -80,7 +80,7 @@ function onClickedEstimatePrice() {
             }
         }
     });
-    var url = "http://127.0.0.1:5000/get_car_Fuel_Type"; 
+    var url = "get_car_Fuel_Type"; 
     
     $.get(url,function(data, status) {
         console.log("got response for get_location_names request");
@@ -94,7 +94,7 @@ function onClickedEstimatePrice() {
             }
         }
     });
-    var url = "http://127.0.0.1:5000/get_car_Owner_Type"; 
+    var url = "get_car_Owner_Type"; 
     
     $.get(url,function(data, status) {
         console.log("got response for get_location_names request");
