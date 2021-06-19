@@ -48,6 +48,7 @@ function onClickedEstimatePrice() {
             var carsLoc = document.getElementById("carsLoc");
             $('#carsLoc').empty();
             for(var i in locations) {
+				console.log("adding");
                 var opt = new Option(locations[i]);
                 $('#carsLoc').append(opt);
             }
