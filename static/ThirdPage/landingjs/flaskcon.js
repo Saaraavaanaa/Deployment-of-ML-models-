@@ -47,6 +47,7 @@ function onClickedEstimatePrice() {
             var locations = data.locations;
 			console.log("Got Location");
             //var carsLoc = document.getElementById("carsLoc");
+			console.log("hi");
             $('#carsLoc').empty();
             for(var i in locations) {
 				console.log("adding");
