@@ -43,20 +43,16 @@ function onClickedEstimatePrice() {
     $.get(url,function(data, status) {
         console.log("got response for get_location_names request");
         if(data) {
-			console.log("Got Data");
             var locations = data.locations;
-			console.log("Got Location");
             //var carsLoc = document.getElementById("carsLoc");
-			console.log("hi");
             $('#carsLoc').empty();
             for(var i in locations) {
-				console.log("adding");
                 var opt = new Option(locations[i]);
                 $('#carsLoc').append(opt);
             }
         }
     });
-    var url = "get_car_names"; 
+    var url = "http://127.0.0.1:5000/get_car_names"; 
     
     $.get(url,function(data, status) {
         console.log("got response for get_location_names request");
@@ -70,7 +66,7 @@ function onClickedEstimatePrice() {
             }
         }
     });
-    var url = "get_car_Transmission"; 
+    var url = "http://127.0.0.1:5000/get_car_Transmission"; 
     
     $.get(url,function(data, status) {
         console.log("got response for get_location_names request");
@@ -84,7 +80,7 @@ function onClickedEstimatePrice() {
             }
         }
     });
-    var url = "get_car_Fuel_Type"; 
+    var url = "http://127.0.0.1:5000/get_car_Fuel_Type"; 
     
     $.get(url,function(data, status) {
         console.log("got response for get_location_names request");
@@ -98,7 +94,7 @@ function onClickedEstimatePrice() {
             }
         }
     });
-    var url = "get_car_Owner_Type"; 
+    var url = "http://127.0.0.1:5000/get_car_Owner_Type"; 
     
     $.get(url,function(data, status) {
         console.log("got response for get_location_names request");
