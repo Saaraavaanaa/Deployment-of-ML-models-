@@ -1,7 +1,7 @@
 from types import MethodType
 from flask import Flask, request, jsonify,render_template
 
-import server.subserver as subserver
+import util as subserver
 
 app = Flask(__name__)
 
