@@ -14,7 +14,7 @@ function onClickedEstimatePrice() {
     var owner=document.getElementById("carsOwner");
     var estPrice = document.getElementById("EstimatedPrice");
 
-    var url = "https://ml-used-car-price-prediction.herokuapp.com/predict_price";
+    var url = "/predict_price";
 
     $.post(url, {
 
@@ -38,7 +38,7 @@ function onClickedEstimatePrice() {
   }
   function onPageLoad() {
     console.log( "document loaded" );
-    var url = "https://ml-used-car-price-prediction.herokuapp.com/get_location_names"; 
+    var url = "/get_location_names"; 
     
     $.get(url,function(data, status) {
         console.log("got response for get_location_names request");
@@ -52,7 +52,7 @@ function onClickedEstimatePrice() {
             }
         }
     });
-    var url = "https://ml-used-car-price-prediction.herokuapp.com/get_car_names"; 
+    var url = "/get_car_names"; 
     
     $.get(url,function(data, status) {
         console.log("got response for get_location_names request");
