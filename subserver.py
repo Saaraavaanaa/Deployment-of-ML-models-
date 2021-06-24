@@ -1,6 +1,7 @@
 import pickle
 import json
 import numpy as np
+import sklearn
 
 
 __locations = None
@@ -87,9 +88,11 @@ def get_car_Owner_Type():
 def get_data_columns():
     return __data_columns
 
+load_saved_pickles()
+
 # just example to run the code properly 
 
-if __name__ == '__main__':
-    load_saved_pickles()
-    print(predict_price('Maruti','Mumbai',2010,72000,'CNG','Manual','First',26.6,998,58.16,5)) #example
+# if __name__ == '__main__':
+#     load_saved_pickles()
+#     print(predict_price('Maruti','Mumbai',2010,72000,'CNG','Manual','First',26.6,998,58.16,5)) #example
     
