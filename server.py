@@ -1,10 +1,13 @@
 from types import MethodType
 from flask import Flask, request, jsonify,render_template
+# from gevent.pywsgi import WSGIServer
+# from flask_cors import CORS, cross_origin
 
 import subserver
 
 app = Flask(__name__)
-
+# cors = CORS(app)
+# app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route('/')
 def index():
