@@ -117,7 +117,4 @@ def predict_price():
 if __name__ == "__main__":
     print("Starting Python Flask Server For Used Cars Price Prediction...")
     subserver.load_saved_pickles()
-    app.run(debug=True)
-
-    # http_server = WSGIServer(('127.0.0.1', 5000), app)
-    # http_server.serve_forever()
+    app.run()
