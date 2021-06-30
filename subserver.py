@@ -51,6 +51,7 @@ def predict_price(CName,Cloc,year,km,f_t,trans,o_t,milg,egie,po,se):
 # load the pickles from model function
 
 def load_saved_pickles():
+    
     print("loading saved pickles...start")
     global  __data_columns
     global __locations
@@ -91,8 +92,6 @@ def get_car_Owner_Type():
 
 def get_data_columns():
     return __data_columns
-
-load_saved_pickles()
 
 # just example to run the code properly 
 

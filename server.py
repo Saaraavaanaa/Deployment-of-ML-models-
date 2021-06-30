@@ -9,7 +9,7 @@ app = Flask(__name__)
 # cors = CORS(app)
 # app.config['CORS_HEADERS'] = 'Content-Type'
 
-@app.route('/')
+@app.route('/',methods=['GET'])
 def index():
     return render_template("index.html")
 @app.route('/secondPage')
