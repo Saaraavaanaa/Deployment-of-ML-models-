@@ -51,7 +51,7 @@ def predict_price(CName,Cloc,year,km,f_t,trans,o_t,milg,egie,po,se):
 # load the pickles from model function
 
 def load_saved_pickles():
-    
+
     print("loading saved pickles...start")
     global  __data_columns
     global __locations
@@ -95,7 +95,7 @@ def get_data_columns():
 
 # just example to run the code properly 
 
-# if __name__ == '__main__':
-#     load_saved_pickles()
-#     print(predict_price('Maruti','Mumbai',2010,72000,'CNG','Manual','First',26.6,998,58.16,5)) #example
+if __name__ == '__main__':
+    load_saved_pickles()
+    print(predict_price('Maruti','Mumbai',2010,72000,'CNG','Manual','First',26.6,998,58.16,5)) #example
     
