@@ -2,6 +2,7 @@ import pickle
 import json
 import numpy as np
 import sklearn
+import os
 
 
 __locations = None
@@ -58,7 +59,10 @@ def load_saved_pickles():
     global __Transmission
     global __Owner_Type
 
-    with open(r".\Model\columns1.json", "r") as f:
+    path =os.path.dirname(__file__)
+    model=os.path.join(path,"Model"),
+
+    with open(model[0]+"/columns1.json", "r") as f:
         __data_columns = json.load(f)['data_columns']
         __Transmission=__data_columns[6:8]
         __Owner_Type=__data_columns[8:12]
@@ -68,7 +72,7 @@ def load_saved_pickles():
 
     global __model
     if __model is None:
-        with open(r'.\Model\Used_car_prices_model.pickle', 'rb') as f:
+        with open(model[0]+"/Used_car_prices_model.pickle", 'rb') as f:
             __model = pickle.load(f)
     print("loading saved pickles...done")
 
