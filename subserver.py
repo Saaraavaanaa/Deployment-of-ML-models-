@@ -3,7 +3,9 @@ import json
 import numpy as np
 import sklearn
 import os
+from flask import Flask
 
+app = Flask(__name__)
 
 __locations = None
 __data_columns = None
