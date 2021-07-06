@@ -81,6 +81,7 @@ def load_saved_pickles():
 #functions of loading 
 
 def get_location_names():
+    global __locations
     return __locations
 def get_car_names():
     return __name
@@ -91,8 +92,6 @@ def get_car_Fuel_Type():
 def get_car_Owner_Type():
     return __Owner_Type
 
-def get_data_columns():
-    return __data_columns
 
 # just example to run the code properly 
 

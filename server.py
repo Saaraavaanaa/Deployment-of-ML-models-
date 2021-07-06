@@ -24,7 +24,7 @@ def get_location_names():
     return response
 
 
-#Load the names in the Htmal
+#Load the names in the Html
 @app.route('/get_car_names', methods=['GET'])
 def get_car_names():
     response = jsonify({
