@@ -115,4 +115,4 @@ def index4():
 if __name__ == "__main__":
     print("Starting Python Flask Server For Used Cars Price Prediction...")
     subserver.load_saved_pickles()
-    app.run(debug=True)
+    app.config["DEBUG"] = True
