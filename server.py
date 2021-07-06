@@ -9,21 +9,7 @@ app = Flask(__name__)
 # cors = CORS(app)
 # app.config['CORS_HEADERS'] = 'Content-Type'
 
-@app.route('/',methods=['GET'])
-def index():
-    return render_template("index.html")
-@app.route('/secondPage')
-def index1():
-    return render_template("secondPage/index.html")
-@app.route('/Thirdpage')
-def index2():
-    return render_template("Thirdpage/index.html")
-@app.route('/landing')
-def index3():
-    return render_template("Thirdpage/landing.html")
-@app.route('/404')
-def index4():
-    return render_template("Thirdpage/404.html")
+
 
 
 # Load the location in the  Html 
@@ -107,6 +93,22 @@ def predict_price():
     response.headers.add('Access-Control-Allow-Origin', '*')
 
     return response
+
+@app.route('/',methods=['GET'])
+def index():
+    return render_template("index.html")
+@app.route('/secondPage')
+def index1():
+    return render_template("secondPage/index.html")
+@app.route('/Thirdpage')
+def index2():
+    return render_template("Thirdpage/index.html")
+@app.route('/landing')
+def index3():
+    return render_template("Thirdpage/landing.html")
+@app.route('/404')
+def index4():
+    return render_template("Thirdpage/404.html")
 
     
 
