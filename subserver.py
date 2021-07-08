@@ -1,8 +1,6 @@
 import pickle
 import json
 import numpy as np
-import sklearn
-import os
 
 
 __locations = None
@@ -51,7 +49,6 @@ def predict_price(CName,Cloc,year,km,f_t,trans,o_t,milg,egie,po,se):
 # load the pickles from model function
 
 def load_saved_pickles():
-
     print("loading saved pickles...start")
     global  __data_columns
     global __locations
@@ -60,28 +57,23 @@ def load_saved_pickles():
     global __Transmission
     global __Owner_Type
 
-    path =os.path.dirname(__file__)
-    model=os.path.join(path,"Model"),
-
-    # with open(model[0]+"/columns1.json", "r") as f:
-    x='{"data_columns": ["YEAR", "KILOMETERS_DRIVEN", "MILEAGE", "ENGINE", "POWER", "SEATS", "AUTOMATIC", "MANUAL", "FIRST", "FOURTH & ABOVE", "SECOND", "THIRD", "CNG", "DIESEL", "ELECTRIC", "LPG", "PETROL", "AHMEDABAD", "BANGALORE", "CHENNAI", "COIMBATORE", "DELHI", "HYDERABAD", "JAIPUR", "KOCHI", "KOLKATA", "MUMBAI", "PUNE", "AMBASSADOR", "AUDI", "BMW", "BENTLEY", "CHEVROLET", "DATSUN", "FIAT", "FORCE", "FORD", "HONDA", "HYUNDAI", "ISUZU", "ISUZU", "JAGUAR", "JEEP", "LAMBORGHINI", "LAND", "MAHINDRA", "MARUTI", "MERCEDES-BENZ", "MINI", "MITSUBISHI", "NISSAN", "PORSCHE", "RENAULT", "SKODA", "SMART", "TATA", "TOYOTA", "VOLKSWAGEN", "VOLVO"]}'
-    __data_columns = json.loads(x)['data_columns']
-    __Transmission=__data_columns[6:8]
-    __Owner_Type=__data_columns[8:12]
-    __Fuel_Type=__data_columns[12:17]
-    __locations = __data_columns[17:28]
-    __name=__data_columns[28:]
+    with open(r".\Model\columns1.json", "r") as f:
+        __data_columns = json.load(f)['data_columns']
+        __Transmission=__data_columns[6:8]
+        __Owner_Type=__data_columns[8:12]
+        __Fuel_Type=__data_columns[12:17]
+        __locations = __data_columns[17:28]
+        __name=__data_columns[28:]
 
     global __model
     if __model is None:
-        with open(model[0]+"/Used_car_prices_model.pickle", 'rb') as f:
+        with open(r'.\Model\Used_car_prices_model.pickle', 'rb') as f:
             __model = pickle.load(f)
     print("loading saved pickles...done")
 
 #functions of loading 
 
 def get_location_names():
-    global __locations
     return __locations
 def get_car_names():
     return __name
@@ -92,6 +84,8 @@ def get_car_Fuel_Type():
 def get_car_Owner_Type():
     return __Owner_Type
 
+def get_data_columns():
+    return __data_columns
 
 # just example to run the code properly 
 
